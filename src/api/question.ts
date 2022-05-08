@@ -7,7 +7,7 @@ export const fetchQuizQuestion = async (amount: number, difficulty: Difficulty) 
 
     return data.results.map((question: Question) => ({
         ...question,
-        answer: shuflleArray([...question.incorrect_answers, question.correct_answer])
+        answers: shuflleArray([...question.incorrect_answers, question.correct_answer])
 
     }))
 }
