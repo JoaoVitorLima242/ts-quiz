@@ -6,9 +6,9 @@ export enum Difficulty {
 
 export type Question = {
     category: string;
-    correctAnswer: string;
+    correct_answer: string;
     difficulty: string;
-    incorrectAnswers: string[];
+    incorrect_answers: string[];
     question: string;
     type: string;
 }
@@ -19,5 +19,5 @@ export type AnswersObject = {
     question: string;
     answer: string;
     correct: boolean;
-    correctAnswer: string;
+    correct_answer: string;
 }
