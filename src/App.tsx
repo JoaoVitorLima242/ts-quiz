@@ -1,10 +1,15 @@
 import React, { useState }from "react";
+import { fetchQuizQuestion } from "./api/question";
 // Components
 import QuestionCard from "./components/QuestionCard/QuestionCard";
+// Types
+import { Difficulty } from "./helpers/types";
 
 const App = () => {
 
+  
   const totalValue: number = 10;
+  console.log(fetchQuizQuestion(totalValue, Difficulty.EASY))
 
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
@@ -30,14 +35,14 @@ const App = () => {
       <button className="start" onClick={startTrivia}>Start</button>
       <p className="score">Score:</p>
       <p>Loading Questions...</p>
-      <QuestionCard
+      {/* <QuestionCard
         questionNr={number + 1}
         totalQuestions={totalValue}
         question={questions[number].question}
         answers={questions[number].answers}
         userAnswer={userAnswer ? userAnswer[number] : undefined}
         callback={checkAnswer}
-      />
+      /> */}
       <button className="next" onClick={nextQuestion}></button>
     </div>
   );

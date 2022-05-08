@@ -8,9 +8,9 @@ export type Question = {
     category: string;
     correctAnswer: string;
     difficulty: string;
-    incorrectAnswer: string[];
+    incorrectAnswers: string[];
     question: string;
     type: string;
 }
 
-export type QuestionState = Question & {answer: string[]};
+export type QuestionState = Question & {answers: string[]};
