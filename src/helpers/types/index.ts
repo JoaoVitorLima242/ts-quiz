@@ -14,3 +14,10 @@ export type Question = {
 }
 
 export type QuestionState = Question & {answers: string[]};
+
+export type AnswersObject = {
+    question: string;
+    answer: string;
+    correct: boolean;
+    correctAnswer: string;
+}

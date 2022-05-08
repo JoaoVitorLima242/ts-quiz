@@ -3,7 +3,7 @@ import { fetchQuizQuestion } from "./api/question";
 // Components
 import QuestionCard from "./components/QuestionCard/QuestionCard";
 // Types
-import { Difficulty } from "./helpers/types";
+import { Difficulty, QuestionState, AnswersObject } from "./helpers/types";
 
 const App = () => {
 
@@ -12,9 +12,9 @@ const App = () => {
   console.log(fetchQuizQuestion(totalValue, Difficulty.EASY))
 
   const [loading, setLoading] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState(0);
-  const [userAnswer, setUserAnswer] = useState([]);
+  const [userAnswer, setUserAnswer] = useState<AnswersObject[]>([]);
   const [gameOver, setGameOver] = useState(true);
 
   const  startTrivia = async () => {
