@@ -67,7 +67,7 @@ const App = () => {
     <>
       <GlobalStyle/>
       <Wrapper>
-        <h1>REACT QUIZ</h1>
+        <h1>React TypeScript Quiz</h1>
         {gameOver || userAnswers.length === totalValue ? (
           <button className="start" onClick={() => startTrivia()}>Start</button>
         ) : null}
